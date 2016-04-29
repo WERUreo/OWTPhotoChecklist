@@ -11,22 +11,16 @@ import CoreLocation
 import SwiftyJSON
 import MapKit
 
-class Location
+class Location : MKPointAnnotation
 {
-    var title: String
-    var address: String
-    var description: String?
-    var location: CLLocationCoordinate2D
-
+    var visited = false
+    
     init(json: JSON)
     {
-        title = json["name"].stringValue
-        address = json["address"].stringValue
-        location = CLLocationCoordinate2DMake(json["location"]["latitude"].doubleValue, json["location"]["longitude"].doubleValue)
+        super.init()
 
-        if let jsonDescription = json["description"].string
-        {
-            description = jsonDescription
-        }
+        self.title = json["name"].stringValue
+        self.subtitle = json["address"].stringValue
+        self.coordinate = CLLocationCoordinate2DMake(json["location"]["latitude"].doubleValue, json["location"]["longitude"].doubleValue)
     }
 }

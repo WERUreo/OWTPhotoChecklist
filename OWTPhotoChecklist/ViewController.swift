@@ -52,6 +52,17 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         self.navigationItem.rightBarButtonItem = userTrackingButton
 
         retrieveLocations()
+        
+        /*
+        if NSUserDefaults.standardUserDefaults().objectForKey("Locations") == nil
+        {
+            retrieveLocations()
+        }
+        else
+        {
+            loadLocations()
+        }
+        */
     }
 
     ////////////////////////////////////////////////////////////
@@ -64,6 +75,53 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         {
             locationManager.startUpdatingLocation()
         }
+    }
+
+    ////////////////////////////////////////////////////////////
+    // MARK: - MKMapViewDelegate
+    ////////////////////////////////////////////////////////////
+
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?
+    {
+        let identifier = "Location"
+
+        if annotation.isKindOfClass(Location.self)
+        {
+            var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+            if annotationView == nil
+            {
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView!.canShowCallout = true
+
+                let button = UIButton(type: .DetailDisclosure)
+                annotationView!.rightCalloutAccessoryView = button
+            }
+            else
+            {
+                annotationView!.annotation = annotation
+            }
+
+            return annotationView
+        }
+
+        return nil
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
+    {
+        let location = view.annotation as! Location
+        let locationName = location.title
+        let locationAddress = location.subtitle
+
+        let ac = UIAlertController(title: locationName, message: locationAddress, preferredStyle: .Alert)
+        ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        ac.addAction(UIAlertAction(title: "Visited", style: .Default)
+        { action in
+
+        })
+        presentViewController(ac, animated: true, completion: nil)
     }
 
     ////////////////////////////////////////////////////////////
@@ -80,35 +138,35 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                     let json = JSON(value)
                     for (_, subJson) in json
                     {
-                        self.locations.append(Location(json: subJson))
+                        let location = Location(json: subJson)
+                        self.locations.append(location)
+                        self.mapView.addAnnotation(location)
                     }
 
-                    var annotations = [MKPointAnnotation]()
-                    for location in self.locations
-                    {
-                        let annotation = MKPointAnnotation()
-                        annotation.title = location.title
-                        annotation.subtitle = location.address
-                        annotation.coordinate = location.location
-                        annotations.append(annotation)
-                    }
-
-                    dispatch_async(dispatch_get_main_queue())
-                    {
-                        self.mapView.showAnnotations(annotations, animated: true)
-
-                        if let userLocation = self.mapView.userLocation.location?.coordinate
-                        {
-                            self.mapView.centerCoordinate = userLocation
-
-                            let region = MKCoordinateRegionMake(self.mapView.centerCoordinate, MKCoordinateSpanMake(0.1, 0.1))
-                            self.mapView.region = region
-                        }
-                    }
+                    //self.saveLocations()
                 }
             case .Failure(let error):
                 print(error)
             }
+        }
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    func saveLocations()
+    {
+        let locationsData = NSKeyedArchiver.archivedDataWithRootObject(locations)
+        NSUserDefaults.standardUserDefaults().setObject(locationsData, forKey: "Locations")
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    func loadLocations()
+    {
+        if let locationsData = NSUserDefaults.standardUserDefaults().objectForKey("Locations") as? NSData,
+            let locationsArray = NSKeyedUnarchiver.unarchiveObjectWithData(locationsData) as? [Location]
+        {
+            locations = locationsArray
         }
     }
 }
