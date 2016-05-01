@@ -13,6 +13,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4219A3C11CD38978005354B2"
+            BuildableName = "OWTPhotoChecklist.app"
+            BlueprintName = "OWTPhotoChecklist"
+            ReferencedContainer = "container:OWTPhotoChecklist.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +35,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4219A3C11CD38978005354B2"
+            BuildableName = "OWTPhotoChecklist.app"
+            BlueprintName = "OWTPhotoChecklist"
+            ReferencedContainer = "container:OWTPhotoChecklist.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +54,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4219A3C11CD38978005354B2"
+            BuildableName = "OWTPhotoChecklist.app"
+            BlueprintName = "OWTPhotoChecklist"
+            ReferencedContainer = "container:OWTPhotoChecklist.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

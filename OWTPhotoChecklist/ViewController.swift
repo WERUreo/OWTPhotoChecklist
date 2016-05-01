@@ -51,9 +51,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         let userTrackingButton = MKUserTrackingBarButtonItem(mapView: mapView)
         self.navigationItem.rightBarButtonItem = userTrackingButton
 
-        retrieveLocations()
-        
-        /*
         if NSUserDefaults.standardUserDefaults().objectForKey("Locations") == nil
         {
             retrieveLocations()
@@ -62,7 +59,6 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         {
             loadLocations()
         }
-        */
     }
 
     ////////////////////////////////////////////////////////////
@@ -101,6 +97,8 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 annotationView!.annotation = annotation
             }
 
+            (annotationView as! MKPinAnnotationView).pinTintColor = (annotation as! Location).visited ? UIColor.greenColor() : UIColor.redColor()
+
             return annotationView
         }
 
@@ -119,7 +117,12 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         ac.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         ac.addAction(UIAlertAction(title: "Visited", style: .Default)
         { action in
-
+            if let found = self.locations.indexOf({$0.title == locationName})
+            {
+                self.locations[found].visited = true
+                self.saveLocations()
+                (view as! MKPinAnnotationView).pinTintColor = UIColor.greenColor()
+            }
         })
         presentViewController(ac, animated: true, completion: nil)
     }
@@ -143,7 +146,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                         self.mapView.addAnnotation(location)
                     }
 
-                    //self.saveLocations()
+                    self.saveLocations()
                 }
             case .Failure(let error):
                 print(error)
@@ -167,6 +170,10 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             let locationsArray = NSKeyedUnarchiver.unarchiveObjectWithData(locationsData) as? [Location]
         {
             locations = locationsArray
+            for location in locations
+            {
+                mapView.addAnnotation(location)
+            }
         }
     }
 }
