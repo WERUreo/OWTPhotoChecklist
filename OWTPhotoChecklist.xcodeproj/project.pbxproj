@@ -13,6 +13,8 @@
 		4219A3CD1CD38979005354B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4219A3CC1CD38979005354B2 /* Assets.xcassets */; };
 		4219A3D01CD38979005354B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4219A3CE1CD38979005354B2 /* LaunchScreen.storyboard */; };
 		4219A3D81CD39291005354B2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219A3D71CD39291005354B2 /* Location.swift */; };
+		423843B01D0A2B2700DAD85A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423843AF1D0A2B2700DAD85A /* DataService.swift */; };
+		423843B41D0A2F3500DAD85A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 423843B31D0A2F3500DAD85A /* GoogleService-Info.plist */; };
 		7024D75617D1778B1B3F9159 /* Pods_OWTPhotoChecklist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0E864B5F5FC1E2FB85F12B /* Pods_OWTPhotoChecklist.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		4219A3CF1CD38979005354B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4219A3D11CD38979005354B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4219A3D71CD39291005354B2 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		423843AF1D0A2B2700DAD85A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataService.swift; path = Services/DataService.swift; sourceTree = "<group>"; };
+		423843B31D0A2F3500DAD85A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70E49DEE4F39AA9563ABF7E4 /* Pods-OWTPhotoChecklist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWTPhotoChecklist.release.xcconfig"; path = "Pods/Target Support Files/Pods-OWTPhotoChecklist/Pods-OWTPhotoChecklist.release.xcconfig"; sourceTree = "<group>"; };
 		FE0E864B5F5FC1E2FB85F12B /* Pods_OWTPhotoChecklist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OWTPhotoChecklist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF4B17F6443633BDE1EC0D7F /* Pods-OWTPhotoChecklist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWTPhotoChecklist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OWTPhotoChecklist/Pods-OWTPhotoChecklist.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,15 +67,25 @@
 		4219A3C41CD38978005354B2 /* OWTPhotoChecklist */ = {
 			isa = PBXGroup;
 			children = (
+				423843AE1D0A2B1000DAD85A /* Services */,
 				4219A3C51CD38978005354B2 /* AppDelegate.swift */,
 				4219A3C71CD38978005354B2 /* ViewController.swift */,
 				4219A3C91CD38978005354B2 /* Main.storyboard */,
 				4219A3CC1CD38979005354B2 /* Assets.xcassets */,
 				4219A3CE1CD38979005354B2 /* LaunchScreen.storyboard */,
 				4219A3D11CD38979005354B2 /* Info.plist */,
+				423843B31D0A2F3500DAD85A /* GoogleService-Info.plist */,
 				4219A3D71CD39291005354B2 /* Location.swift */,
 			);
 			path = OWTPhotoChecklist;
+			sourceTree = "<group>";
+		};
+		423843AE1D0A2B1000DAD85A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				423843AF1D0A2B2700DAD85A /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		DDCF37F7B81277A84FC104A9 /* Pods */ = {
@@ -153,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4219A3D01CD38979005354B2 /* LaunchScreen.storyboard in Resources */,
+				423843B41D0A2F3500DAD85A /* GoogleService-Info.plist in Resources */,
 				4219A3CD1CD38979005354B2 /* Assets.xcassets in Resources */,
 				4219A3CB1CD38978005354B2 /* Main.storyboard in Resources */,
 			);
@@ -216,6 +231,7 @@
 				4219A3C81CD38978005354B2 /* ViewController.swift in Sources */,
 				4219A3D81CD39291005354B2 /* Location.swift in Sources */,
 				4219A3C61CD38978005354B2 /* AppDelegate.swift in Sources */,
+				423843B01D0A2B2700DAD85A /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

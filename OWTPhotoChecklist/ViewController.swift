@@ -14,7 +14,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 {
-    let locationsURLString = "https://brigades.opendatanetwork.com/resource/hzkr-id6u.json"
+    let locationsURLString = "https://brigades.opendatanetwork.com/resource/aq56-mwpv.json"
 
     ////////////////////////////////////////////////////////////
     // MARK: - Outlets
