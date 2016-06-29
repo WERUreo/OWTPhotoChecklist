@@ -8,39 +8,27 @@
 
 import Foundation
 import Firebase
-import FirebaseDatabase
+
+let URL_BASE = FIRDatabase.database().reference()
 
 struct DataService
 {
     static let sharedInstance = DataService()
-    private let rootRef = FIRDatabase.database().reference()
 
     ////////////////////////////////////////////////////////////
-/*
-    func retrieveLocations(completion: [Location] -> Void)
+
+    private var _REF_BASE = URL_BASE
+    private var _REF_LOCATIONS = URL_BASE.child("historic-locations")
+
+    ////////////////////////////////////////////////////////////
+
+    var REF_BASE: FIRDatabaseReference
     {
-        let locationsURLString = "https://brigades.opendatanetwork.com/resource/hzkr-id6u.json"
-        var locations = [Location]()
+        return _REF_BASE
+    }
 
-        Alamofire.request(.GET, locationsURLString).validate().responseJSON
-            { response in
-                switch response.result
-                {
-                case .Success:
-                    if let value = response.result.value
-                    {
-                        let json = JSON(value)
-                        for (_, subJson) in json
-                        {
-                            let location = Location(json: subJson)
-                            locations.append(location)
-                        }
-
-                        self.saveLocations()
-                    }
-                case .Failure(let error):
-                    print(error)
-                }
-        }
-    } */
+    var REF_LOCATIONS: FIRDatabaseReference
+    {
+        return _REF_LOCATIONS
+    }
 }

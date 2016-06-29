@@ -39,7 +39,7 @@ class Location : MKPointAnnotation, NSCoding
     {
         self.init(title: json["name"].stringValue,
                   subtitle: json["address"].stringValue,
-                  coordinate: CLLocationCoordinate2DMake(json["location"]["coordinates"][1].doubleValue, json["location"]["coordinates"][0].doubleValue))
+                  coordinate: CLLocationCoordinate2DMake(json["location"]["latitude"].doubleValue, json["location"]["longitude"].doubleValue))
     }
 
     ////////////////////////////////////////////////////////////

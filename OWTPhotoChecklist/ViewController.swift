@@ -9,8 +9,8 @@
 import UIKit
 import MapKit
 import CoreLocation
-import Alamofire
 import SwiftyJSON
+import Firebase
 
 class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
 {
@@ -131,27 +131,27 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
 
     func retrieveLocations()
     {
-        Alamofire.request(.GET, locationsURLString).validate().responseJSON
-        { response in
-            switch response.result
+        DataService.sharedInstance.REF_LOCATIONS.observeEventType(.Value, withBlock:
+        { snapshot in
+            self.locations = []
+            print(snapshot)
+
+            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot]
             {
-            case .Success:
-                if let value = response.result.value
+                for snap in snapshots
                 {
-                    let json = JSON(value)
-                    for (_, subJson) in json
+                    if let locationDict = snap.value as? [String : AnyObject]
                     {
-                        let location = Location(json: subJson)
+                        print(locationDict)
+                        let location = Location(json: JSON(locationDict))
                         self.locations.append(location)
                         self.mapView.addAnnotation(location)
                     }
-
-                    self.saveLocations()
                 }
-            case .Failure(let error):
-                print(error)
+
+                self.saveLocations()
             }
-        }
+        })
     }
 
     ////////////////////////////////////////////////////////////
