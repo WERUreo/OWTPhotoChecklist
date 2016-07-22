@@ -19,6 +19,7 @@ struct DataService
 
     private var _REF_BASE = URL_BASE
     private var _REF_LOCATIONS = URL_BASE.child("historic-locations")
+    private var _REF_ORMOND = URL_BASE.child("ormond-beach")
 
     ////////////////////////////////////////////////////////////
 
@@ -30,5 +31,10 @@ struct DataService
     var REF_LOCATIONS: FIRDatabaseReference
     {
         return _REF_LOCATIONS
+    }
+
+    var REF_ORMOND: FIRDatabaseReference
+    {
+        return _REF_ORMOND
     }
 }

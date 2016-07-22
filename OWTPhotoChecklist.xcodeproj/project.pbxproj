@@ -13,25 +13,41 @@
 		4219A3CD1CD38979005354B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4219A3CC1CD38979005354B2 /* Assets.xcassets */; };
 		4219A3D01CD38979005354B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4219A3CE1CD38979005354B2 /* LaunchScreen.storyboard */; };
 		4219A3D81CD39291005354B2 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219A3D71CD39291005354B2 /* Location.swift */; };
+		422E7C511D410BE7000B995F /* AddLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422E7C501D410BE7000B995F /* AddLocationVC.swift */; };
 		423843B01D0A2B2700DAD85A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423843AF1D0A2B2700DAD85A /* DataService.swift */; };
 		423843B41D0A2F3500DAD85A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 423843B31D0A2F3500DAD85A /* GoogleService-Info.plist */; };
-		7024D75617D1778B1B3F9159 /* Pods_OWTPhotoChecklist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE0E864B5F5FC1E2FB85F12B /* Pods_OWTPhotoChecklist.framework */; };
+		424EF11C1D2F412500D5817A /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424EF11B1D2F412500D5817A /* UIColor+CustomColors.swift */; };
+		426FA3371D3ED7E500D5B3BA /* HistoricLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426FA3361D3ED7E500D5B3BA /* HistoricLocation.swift */; };
+		428B9CF91D2DF74A004858AA /* GeoJSONService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B9CF81D2DF74A004858AA /* GeoJSONService.swift */; };
+		42D3CFD31D3D9A26008E60DB /* OrmondTourVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D3CFD21D3D9A26008E60DB /* OrmondTourVC.swift */; };
+		42D3CFD51D3DC43E008E60DB /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D3CFD41D3DC43E008E60DB /* FirebaseDataService.swift */; };
+		42F3C55A1D41B51200AB4CD0 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F3C5591D41B51200AB4CD0 /* CustomButton.swift */; };
+		42F4E6FD1D3FB73700D073CC /* OrmondAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F4E6FC1D3FB73700D073CC /* OrmondAnnotation.swift */; };
+		65A7E31C3DE438908A6BA176 /* Pods_OWTPhotoChecklist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7A26D65E34FEBADF57A1CA /* Pods_OWTPhotoChecklist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C4570D42EB660BEBDBC1A94 /* Pods-OWTPhotoChecklist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWTPhotoChecklist.release.xcconfig"; path = "Pods/Target Support Files/Pods-OWTPhotoChecklist/Pods-OWTPhotoChecklist.release.xcconfig"; sourceTree = "<group>"; };
 		4219A3C21CD38978005354B2 /* OWTPhotoChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OWTPhotoChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4219A3C51CD38978005354B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4219A3C71CD38978005354B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4219A3C71CD38978005354B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Controllers/ViewController.swift; sourceTree = "<group>"; };
 		4219A3CA1CD38978005354B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4219A3CC1CD38979005354B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4219A3CF1CD38979005354B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4219A3D11CD38979005354B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4219A3D71CD39291005354B2 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4219A3D71CD39291005354B2 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
+		422E7C501D410BE7000B995F /* AddLocationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddLocationVC.swift; path = Controllers/AddLocationVC.swift; sourceTree = "<group>"; };
 		423843AF1D0A2B2700DAD85A /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataService.swift; path = Services/DataService.swift; sourceTree = "<group>"; };
 		423843B31D0A2F3500DAD85A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		70E49DEE4F39AA9563ABF7E4 /* Pods-OWTPhotoChecklist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWTPhotoChecklist.release.xcconfig"; path = "Pods/Target Support Files/Pods-OWTPhotoChecklist/Pods-OWTPhotoChecklist.release.xcconfig"; sourceTree = "<group>"; };
-		FE0E864B5F5FC1E2FB85F12B /* Pods_OWTPhotoChecklist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OWTPhotoChecklist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF4B17F6443633BDE1EC0D7F /* Pods-OWTPhotoChecklist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWTPhotoChecklist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OWTPhotoChecklist/Pods-OWTPhotoChecklist.debug.xcconfig"; sourceTree = "<group>"; };
+		424EF11B1D2F412500D5817A /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+CustomColors.swift"; path = "Extensions/UIColor+CustomColors.swift"; sourceTree = "<group>"; };
+		426FA3361D3ED7E500D5B3BA /* HistoricLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoricLocation.swift; path = Models/HistoricLocation.swift; sourceTree = "<group>"; };
+		428B9CF81D2DF74A004858AA /* GeoJSONService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeoJSONService.swift; path = Services/GeoJSONService.swift; sourceTree = "<group>"; };
+		42D3CFD21D3D9A26008E60DB /* OrmondTourVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrmondTourVC.swift; path = Controllers/OrmondTourVC.swift; sourceTree = "<group>"; };
+		42D3CFD41D3DC43E008E60DB /* FirebaseDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseDataService.swift; path = Services/FirebaseDataService.swift; sourceTree = "<group>"; };
+		42F3C5591D41B51200AB4CD0 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = Views/CustomButton.swift; sourceTree = "<group>"; };
+		42F4E6FC1D3FB73700D073CC /* OrmondAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrmondAnnotation.swift; path = Annotations/OrmondAnnotation.swift; sourceTree = "<group>"; };
+		E10EA91A37537FDA8409AD62 /* Pods-OWTPhotoChecklist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OWTPhotoChecklist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OWTPhotoChecklist/Pods-OWTPhotoChecklist.debug.xcconfig"; sourceTree = "<group>"; };
+		EE7A26D65E34FEBADF57A1CA /* Pods_OWTPhotoChecklist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OWTPhotoChecklist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7024D75617D1778B1B3F9159 /* Pods_OWTPhotoChecklist.framework in Frameworks */,
+				65A7E31C3DE438908A6BA176 /* Pods_OWTPhotoChecklist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +67,8 @@
 			children = (
 				4219A3C41CD38978005354B2 /* OWTPhotoChecklist */,
 				4219A3C31CD38978005354B2 /* Products */,
-				DDCF37F7B81277A84FC104A9 /* Pods */,
-				F002D52E92D608953A84546E /* Frameworks */,
+				AFE5A48D86255809E7512E84 /* Pods */,
+				EE9FA984DDE09EA94F973B7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,15 +83,16 @@
 		4219A3C41CD38978005354B2 /* OWTPhotoChecklist */ = {
 			isa = PBXGroup;
 			children = (
+				42F3C5581D41B50000AB4CD0 /* Views */,
+				42F4E6FB1D3FB70200D073CC /* Annotations */,
+				426FA3381D3EDA1000D5B3BA /* Resources */,
+				426FA3351D3ED7C400D5B3BA /* Models */,
+				42D3CFD11D3D99F7008E60DB /* Controllers */,
+				424EF11A1D2F410C00D5817A /* Extensions */,
 				423843AE1D0A2B1000DAD85A /* Services */,
 				4219A3C51CD38978005354B2 /* AppDelegate.swift */,
-				4219A3C71CD38978005354B2 /* ViewController.swift */,
-				4219A3C91CD38978005354B2 /* Main.storyboard */,
-				4219A3CC1CD38979005354B2 /* Assets.xcassets */,
-				4219A3CE1CD38979005354B2 /* LaunchScreen.storyboard */,
 				4219A3D11CD38979005354B2 /* Info.plist */,
 				423843B31D0A2F3500DAD85A /* GoogleService-Info.plist */,
-				4219A3D71CD39291005354B2 /* Location.swift */,
 			);
 			path = OWTPhotoChecklist;
 			sourceTree = "<group>";
@@ -84,23 +101,78 @@
 			isa = PBXGroup;
 			children = (
 				423843AF1D0A2B2700DAD85A /* DataService.swift */,
+				428B9CF81D2DF74A004858AA /* GeoJSONService.swift */,
+				42D3CFD41D3DC43E008E60DB /* FirebaseDataService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
 		};
-		DDCF37F7B81277A84FC104A9 /* Pods */ = {
+		424EF11A1D2F410C00D5817A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FF4B17F6443633BDE1EC0D7F /* Pods-OWTPhotoChecklist.debug.xcconfig */,
-				70E49DEE4F39AA9563ABF7E4 /* Pods-OWTPhotoChecklist.release.xcconfig */,
+				424EF11B1D2F412500D5817A /* UIColor+CustomColors.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		426FA3351D3ED7C400D5B3BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				426FA3361D3ED7E500D5B3BA /* HistoricLocation.swift */,
+				4219A3D71CD39291005354B2 /* Location.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		426FA3381D3EDA1000D5B3BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4219A3CC1CD38979005354B2 /* Assets.xcassets */,
+				4219A3C91CD38978005354B2 /* Main.storyboard */,
+				4219A3CE1CD38979005354B2 /* LaunchScreen.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		42D3CFD11D3D99F7008E60DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				42D3CFD21D3D9A26008E60DB /* OrmondTourVC.swift */,
+				4219A3C71CD38978005354B2 /* ViewController.swift */,
+				422E7C501D410BE7000B995F /* AddLocationVC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		42F3C5581D41B50000AB4CD0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42F3C5591D41B51200AB4CD0 /* CustomButton.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		42F4E6FB1D3FB70200D073CC /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				42F4E6FC1D3FB73700D073CC /* OrmondAnnotation.swift */,
+			);
+			name = Annotations;
+			sourceTree = "<group>";
+		};
+		AFE5A48D86255809E7512E84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E10EA91A37537FDA8409AD62 /* Pods-OWTPhotoChecklist.debug.xcconfig */,
+				3C4570D42EB660BEBDBC1A94 /* Pods-OWTPhotoChecklist.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F002D52E92D608953A84546E /* Frameworks */ = {
+		EE9FA984DDE09EA94F973B7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FE0E864B5F5FC1E2FB85F12B /* Pods_OWTPhotoChecklist.framework */,
+				EE7A26D65E34FEBADF57A1CA /* Pods_OWTPhotoChecklist.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,12 +184,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4219A3D41CD38979005354B2 /* Build configuration list for PBXNativeTarget "OWTPhotoChecklist" */;
 			buildPhases = (
-				51DEAF3956D72DC89A2933B5 /* Check Pods Manifest.lock */,
+				A789586B6AFB67E6F0169E7E /* [CP] Check Pods Manifest.lock */,
 				4219A3BE1CD38978005354B2 /* Sources */,
 				4219A3BF1CD38978005354B2 /* Frameworks */,
 				4219A3C01CD38978005354B2 /* Resources */,
-				18651DD51E1F1C43ECDAC87D /* Embed Pods Frameworks */,
-				E163C839FDE7BADC148D9217 /* Copy Pods Resources */,
+				40F6F2F53375A21B3CE190C2 /* [CP] Embed Pods Frameworks */,
+				A832BC3600B963C0F0D591CC /* [CP] Copy Pods Resources */,
+				569D615276DB7E9AFE2D6CB6 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,7 +249,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18651DD51E1F1C43ECDAC87D /* Embed Pods Frameworks */ = {
+		40F6F2F53375A21B3CE190C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OWTPhotoChecklist/Pods-OWTPhotoChecklist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		569D615276DB7E9AFE2D6CB6 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -191,14 +279,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OWTPhotoChecklist/Pods-OWTPhotoChecklist-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		51DEAF3956D72DC89A2933B5 /* Check Pods Manifest.lock */ = {
+		A789586B6AFB67E6F0169E7E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,14 +294,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E163C839FDE7BADC148D9217 /* Copy Pods Resources */ = {
+		A832BC3600B963C0F0D591CC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,10 +316,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42D3CFD51D3DC43E008E60DB /* FirebaseDataService.swift in Sources */,
 				4219A3C81CD38978005354B2 /* ViewController.swift in Sources */,
+				428B9CF91D2DF74A004858AA /* GeoJSONService.swift in Sources */,
 				4219A3D81CD39291005354B2 /* Location.swift in Sources */,
 				4219A3C61CD38978005354B2 /* AppDelegate.swift in Sources */,
+				426FA3371D3ED7E500D5B3BA /* HistoricLocation.swift in Sources */,
+				424EF11C1D2F412500D5817A /* UIColor+CustomColors.swift in Sources */,
+				42F4E6FD1D3FB73700D073CC /* OrmondAnnotation.swift in Sources */,
+				42F3C55A1D41B51200AB4CD0 /* CustomButton.swift in Sources */,
+				42D3CFD31D3D9A26008E60DB /* OrmondTourVC.swift in Sources */,
 				423843B01D0A2B2700DAD85A /* DataService.swift in Sources */,
+				422E7C511D410BE7000B995F /* AddLocationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +440,7 @@
 		};
 		4219A3D51CD38979005354B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF4B17F6443633BDE1EC0D7F /* Pods-OWTPhotoChecklist.debug.xcconfig */;
+			baseConfigurationReference = E10EA91A37537FDA8409AD62 /* Pods-OWTPhotoChecklist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OWTPhotoChecklist/Info.plist;
@@ -356,7 +452,7 @@
 		};
 		4219A3D61CD38979005354B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70E49DEE4F39AA9563ABF7E4 /* Pods-OWTPhotoChecklist.release.xcconfig */;
+			baseConfigurationReference = 3C4570D42EB660BEBDBC1A94 /* Pods-OWTPhotoChecklist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OWTPhotoChecklist/Info.plist;
