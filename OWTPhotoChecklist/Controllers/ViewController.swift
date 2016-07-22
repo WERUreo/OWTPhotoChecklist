@@ -58,7 +58,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             loadLocations()
         }
 
-        GeoJSONService.sharedInstance.fetch()
+        GeoJSONService.sharedInstance.fetch("https://raw.githubusercontent.com/WERUreo/GISData/master/Orange_County/City_of_Orlando/OrlandoHistoricDistricts.geojson")
         { response in
             if let polygons = response as? [MKPolygon]
             {

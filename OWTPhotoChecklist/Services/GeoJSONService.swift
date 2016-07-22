@@ -14,9 +14,9 @@ struct GeoJSONService
 {
     static let sharedInstance = GeoJSONService()
 
-    func fetch(geoPoints completion: [AnyObject] -> Void)
+    func fetch(url: String, geoPoints completion: [AnyObject] -> Void)
     {
-        Alamofire.request(.GET, "https://raw.githubusercontent.com/WERUreo/GISData/master/Orange_County/City_of_Orlando/OrlandoHistoricDistricts.geojson").responseJSON
+        Alamofire.request(.GET, url).responseJSON
         { response in
             if let resultData = response.result.value as? [NSObject: AnyObject]
             {
